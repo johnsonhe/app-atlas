@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6a55db">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Investigate iOS apps with evidence from app listings and customer reviews. Compare products, understand complaints, and explore unmet needs.">
   <title>App Atlas — App Store research</title>
   <link rel="stylesheet" href="/static/style.css">
@@ -25,8 +25,8 @@
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H7l-4 3V11a9 9 0 0 1 18 0ZM7 9h10M7 13h6"/></symbol>
   </svg>
   <aside class="sidebar">
-    <a class="brand" href="#research" aria-label="App Atlas home"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span>App Atlas<span class="brand-sub">APP STORE RESEARCH</span></span></a>
-    <button class="new-research" id="new-research"><svg><use href="#i-plus"/></svg>New investigation<span class="shortcut">↗</span></button>
+    <a class="brand" href="#research" aria-label="App Atlas home">App Atlas</a>
+    <button class="new-research" id="new-research"><svg><use href="#i-plus"/></svg>New investigation</button>
     <p class="nav-label">WORKSPACE</p>
     <nav aria-label="Main navigation">
       <a href="#research" data-view="research" class="nav-link active"><svg><use href="#i-search"/></svg>Research<span class="nav-dot"></span></a>
@@ -34,18 +34,17 @@
       <a href="#reports" data-view="reports" class="nav-link"><svg><use href="#i-book"/></svg>Saved reports<span id="saved-count" class="nav-count">0</span></a>
       <a href="#coverage" data-view="coverage" class="nav-link"><svg><use href="#i-data"/></svg>Data & coverage</a>
     </nav>
-    <div class="sidebar-note"><span class="note-mark">↗</span><strong>From question to evidence.</strong><p>Independent researchers explore the data. Every finding links back to its source.</p><button class="text-button" id="how-it-works">How it works <span>→</span></button></div>
+    <div class="sidebar-note"><button class="text-button" id="how-it-works">How it works</button></div>
     <div class="sidebar-bottom"><span class="connection-dot"></span><span id="connection-label">Loading snapshot</span><span class="version">v1.0</span></div>
-    <div class="profile"><span class="avatar">JH</span><span><strong>Research workspace</strong><small>Project 2 · Deep Research</small></span></div>
+    <div class="profile"><span><strong>Research workspace</strong><small>Project 2 · Deep Research</small></span></div>
   </aside>
   <main>
-    <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="slash">/</span><strong id="page-title">Research</strong></div><div class="top-right"><span class="store-badge"><span class="apple-glyph">●</span> iOS App Store</span><button id="coverage-shortcut" class="icon-button" aria-label="View data coverage"><svg><use href="#i-data"/></svg></button></div></header>
+    <header class="topbar"><div class="breadcrumb"><span>Workspace</span><span class="slash">/</span><strong id="page-title">Research</strong></div><div class="top-right"><span class="store-badge">iOS App Store</span><button id="coverage-shortcut" class="icon-button" aria-label="View data coverage"><svg><use href="#i-data"/></svg></button></div></header>
 
     <section id="view-research" class="view active">
       <div id="welcome" class="welcome">
-        <div class="eyebrow"><span class="tiny-star">✳</span> A LITTLE CURIOSITY GOES A LONG WAY</div>
-        <h1>Understand what<br>app users <span>really need.</span></h1>
-        <p class="hero-description">Explore competing apps, recurring complaints, and unmet needs.<br>Turn a question into a research report you can trace to the evidence.</p>
+        <h1>Research the App Store.</h1>
+        <p class="hero-description">Compare apps and understand user feedback, with sources for every finding.<br>For product researchers and developers.</p>
       </div>
       <div class="research-body">
         <form id="research-form" class="composer">
@@ -57,13 +56,13 @@
         <div id="status-message" class="status-message hidden" role="status" aria-live="polite"></div>
 
         <div id="starter-content">
-          <div class="section-heading"><h2>Start with a question</h2><span>Three ways to explore</span></div>
+          <div class="section-heading"><h2>Try a question</h2></div>
           <div class="prompt-cards">
-            <button class="prompt-card" data-prompt="Compare Notion, Evernote, and Todoist: what subscription and paywall complaints recur in their identified US reviews, and what do higher-rated reviews value? Cite examples and exact keyword-match counts with denominators."><span class="prompt-icon purple"><svg><use href="#i-grid"/></svg></span><span class="prompt-category">COMPARE COMPETITORS</span><strong>What’s behind the paywall?</strong><p>Compare subscription complaints and praised features across productivity apps.</p><span class="prompt-footer">Notion · Evernote · Todoist<svg><use href="#i-arrow"/></svg></span></button>
-            <button class="prompt-card" data-prompt="Compare Spotify and YouTube using their listings and identified US reviews. What do reviewers report about ads and paid subscriptions, where do experiences differ, and what cannot be concluded from this sample?"><span class="prompt-icon blue"><svg><use href="#i-message"/></svg></span><span class="prompt-category">UNDERSTAND USER FEEDBACK</span><strong>When do ads get in the way?</strong><p>Investigate user reports and advertised features in two entertainment apps.</p><span class="prompt-footer">Spotify · YouTube<svg><use href="#i-arrow"/></svg></span></button>
-            <button class="prompt-card" data-prompt="In the unattributed Mendeley pooled review corpus, investigate accessibility complaints involving screen readers, text size, and contrast. Compare keyword-match counts with denominators, read supporting and contradictory examples, and suggest research opportunities without attributing reviews to apps or categories."><span class="prompt-icon peach"><svg><use href="#i-bolt"/></svg></span><span class="prompt-category">EXPLORE UNMET NEEDS</span><strong>Who is being left out?</strong><p>Explore accessibility feedback across the pooled customer-review corpus.</p><span class="prompt-footer">Accessibility · User experience<svg><use href="#i-arrow"/></svg></span></button>
+            <button class="prompt-card" data-prompt="Compare Notion, Evernote, and Todoist: what subscription and paywall complaints recur in their identified US reviews, and what do higher-rated reviews value? Cite examples and exact keyword-match counts with denominators."><span class="prompt-category">Compare apps</span><strong>What’s behind the paywall?</strong><p>Compare subscription complaints and praised features across productivity apps.</p><span class="prompt-footer">Notion · Evernote · Todoist<svg><use href="#i-arrow"/></svg></span></button>
+            <button class="prompt-card" data-prompt="Compare Spotify and YouTube using their listings and identified US reviews. What do reviewers report about ads and paid subscriptions, where do experiences differ, and what cannot be concluded from this sample?"><span class="prompt-category">Understand feedback</span><strong>When do ads get in the way?</strong><p>Investigate user reports and advertised features in two entertainment apps.</p><span class="prompt-footer">Spotify · YouTube<svg><use href="#i-arrow"/></svg></span></button>
+            <button class="prompt-card" data-prompt="In the unattributed Mendeley pooled review corpus, investigate accessibility complaints involving screen readers, text size, and contrast. Compare keyword-match counts with denominators, read supporting and contradictory examples, and suggest research opportunities without attributing reviews to apps or categories."><span class="prompt-category">Explore unmet needs</span><strong>Who is being left out?</strong><p>Explore accessibility feedback across the pooled customer-review corpus.</p><span class="prompt-footer">Accessibility · User experience<svg><use href="#i-arrow"/></svg></span></button>
           </div>
-          <div class="snapshot-strip"><div><span class="snapshot-icon"><svg><use href="#i-data"/></svg></span><span><strong>Your research starts with real data</strong><small>Packaged snapshot + optional live app discovery</small></span></div><div class="snapshot-stats"><span><strong id="metric-apps">—</strong><small>apps in snapshot</small></span><span><strong id="metric-reviews">—</strong><small>searchable reviews</small></span><span><strong id="metric-categories">—</strong><small>app categories</small></span></div></div>
+          <div class="snapshot-strip"><div><span><strong>Source snapshot</strong><small>Loaded data + live app discovery</small></span></div><div class="snapshot-stats"><span><strong id="metric-apps">—</strong><small>apps in snapshot</small></span><span><strong id="metric-reviews">—</strong><small>searchable reviews</small></span><span><strong id="metric-categories">—</strong><small>app categories</small></span></div></div>
           <p class="scope-note">Explore iOS apps across categories. Review coverage varies by app. <button class="text-button" id="scope-link">See exactly what’s included ↗</button></p>
         </div>
 
@@ -82,7 +81,7 @@
     <section id="view-coverage" class="view"><div class="page-heading"><span class="eyebrow small">KNOW YOUR EVIDENCE</span><h1>Data & coverage</h1><p>What’s loaded, where it came from, and what it can tell you.</p></div><div id="coverage-metrics" class="coverage-metrics"></div><div class="coverage-callout"><svg><use href="#i-book"/></svg><div><strong>Broad discovery. Explicit coverage.</strong><p>The app can discover iOS apps across categories. The packaged data is a bounded snapshot, and each source has different coverage. An absent record is an unknown, not proof that something never happened.</p></div></div><div id="dataset-cards" class="dataset-cards"></div><div class="coverage-bottom"><div><h2>What the data cannot establish</h2><ul id="coverage-limits"></ul></div><div><h2>App categories in this snapshot</h2><div id="category-bars"></div></div></div></section>
 
     <section id="view-reports" class="view"><div class="page-heading"><span class="eyebrow small">KEEP THE USEFUL FINDINGS</span><h1>Saved reports</h1><p>Your saved investigations live in this browser.</p></div><div id="saved-reports"></div></section>
-    <footer><span>App Atlas</span><span>Made for curious product builders.</span><a href="/docs" target="_blank" rel="noopener">API documentation ↗</a></footer>
+    <footer><span>App Atlas</span><span>App Store research</span><a href="/docs" target="_blank" rel="noopener">API documentation ↗</a></footer>
   </main>
 
   <div id="drawer-overlay" class="drawer-overlay hidden"></div><aside id="drawer" class="drawer hidden" role="dialog" aria-modal="true" aria-labelledby="drawer-title"><div class="drawer-top"><span class="eyebrow small" id="drawer-kind">SOURCE EVIDENCE</span><button id="close-drawer" class="icon-button" aria-label="Close detail panel"><svg><use href="#i-close"/></svg></button></div><div id="drawer-content"></div></aside>
