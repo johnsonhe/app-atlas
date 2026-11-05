@@ -1,5 +1,7 @@
 {
-  "deploy_url": "",
-  "authors": ["jh5102"],
+  "deploy_url": "https://app-atlas-jh5102-773581043508.northamerica-northeast2.run.app",
+  "authors": [
+    "jh5102"
+  ],
   "path": "research"
 }

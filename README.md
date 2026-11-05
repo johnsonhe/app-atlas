@@ -4,7 +4,7 @@ App Atlas investigates iOS apps across categories using app listings, customer r
 
 Ask a concrete question, such as comparing subscription feedback across competing apps. The Lead plans independent assignments, Researchers explore evidence concurrently in fresh contexts, the Lead requests follow-up research when needed, and the Writer produces a cited report. An Evidence Checker checks each claim against its citations before the report is shown.
 
-**Live app:** see [`submission.json`](submission.json). **Path:** Deep Research (`research`). **Author:** `jh5102`.
+**Live app:** [Open App Atlas](https://app-atlas-jh5102-773581043508.northamerica-northeast2.run.app). Deployment metadata: [`submission.json`](submission.json). **Path:** Deep Research (`research`). **Author:** `jh5102`.
 
 ## Use the app
 
