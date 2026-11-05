@@ -1,0 +1,1436 @@
+{
+  "base_url": "https://app-atlas-jh5102-773581043508.northamerica-northeast2.run.app",
+  "elapsed_seconds": 26.98,
+  "question": "Compare Spotify and YouTube's advertised premium features with user reports about ads and subscriptions. Use identified US reviews and cite sources.",
+  "response": "# Premium Features vs. User Reality: Spotify and YouTube\n\nSpotify and YouTube advertise premium tiers to remove ads, enable offline downloads, and unlock background or on-demand playback. [S2](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S2) [S3](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S3)\n\nFree-tier users of both apps report heavy ad frequency and intrusive ad behaviors that disrupt their listening and viewing experiences. [S5](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S5) [S6](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S6) [S16](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S16) [S23](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S23) [S26](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S26)\n\nPaying subscribers on both platforms express frustration with unexpected billing practices, forced promotional content, and restricted features. [S17](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S17) [S18](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S18) [S31](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S31) [S34](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S34)\n\n## Advertised Premium Benefits\n\nSpotify Premium promises ad-free music listening, full on-demand playback, and offline downloads for songs, podcasts, and audiobooks. [S2](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S2)\n\nYouTube Premium advertises ad-free video viewing, offline video saving, and background or lock-screen playback, bundled with YouTube Music Premium. [S3](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S3)\n\n## User Reports on Free Tier Ads\n\nSpotify free-tier users report high ad density, complaining of ads appearing every two to three songs or in blocks of 30 to 60 seconds. [S23](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S23) [S24](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S24) [S26](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S26)\n\nYouTube free-tier users report aggressive ad placements, such as multiple unskippable 30-second ad breaks during short videos. [S16](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S16)\n\nSome YouTube users experience technical glitches where mid-roll ads lack progress bars or skip buttons, forcing them to restart the application. [S5](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S5)\n\n## Premium Subscriber Friction\n\nPaying Spotify Premium subscribers report frustration with forced promotional music pushes and distracting video features they cannot opt out of. [S31](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S31)\n\nSpotify subscribers also express disappointment over monthly listening limits placed on audiobooks despite paying for a premium subscription. [S34](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S34)\n\nYouTube Premium subscribers complain about forced UI elements like Shorts, hidden subscription tabs, and rigid billing cycles managed through Apple. [S17](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S17) [S18](/api/reports/3b59902ec012497580f7c88dd3b105bf/sources/S18)\n\n## What the data cannot establish\n\n- This analysis relies on a bounded sample of recent US Apple App Store customer reviews and developer listings.\n- User reviews are self-reported experiences and cannot verify broader financial metrics, technical root causes, or population-wide sentiment.\n\n## Questions to investigate next\n\n- Analyze a larger longitudinal dataset of reviews to determine if complaints about ad glitches and UI changes correlate with specific app version updates.\n- Compare subscription billing complaints across a wider range of media streaming apps to identify industry-standard trial and cancellation patterns.",
+  "session_id": "8cb938b1-6530-4393-8c53-fdbe6b8e35e8",
+  "tool_calls": [
+    {
+      "agent": "Lead",
+      "name": "get_coverage",
+      "args": {},
+      "result": {
+        "citation": "S1",
+        "apps": 69,
+        "reviews": 162583,
+        "identified_reviews": 6650,
+        "pooled_reviews": 155933,
+        "categories": [
+          {
+            "category": "Productivity",
+            "count": 9
+          },
+          {
+            "category": "Finance",
+            "count": 8
+          },
+          {
+            "category": "Social Networking",
+            "count": 7
+          },
+          {
+            "category": "Health & Fitness",
+            "count": 7
+          },
+          {
+            "category": "Shopping",
+            "count": 6
+          },
+          {
+            "category": "Education",
+            "count": 6
+          },
+          {
+            "category": "Travel",
+            "count": 5
+          },
+          {
+            "category": "Food & Drink",
+            "count": 5
+          },
+          {
+            "category": "Weather",
+            "count": 3
+          },
+          {
+            "category": "Photo & Video",
+            "count": 3
+          },
+          {
+            "category": "Games",
+            "count": 3
+          },
+          {
+            "category": "Entertainment",
+            "count": 2
+          },
+          {
+            "category": "Utilities",
+            "count": 1
+          },
+          {
+            "category": "News",
+            "count": 1
+          },
+          {
+            "category": "Navigation",
+            "count": 1
+          },
+          {
+            "category": "Music",
+            "count": 1
+          },
+          {
+            "category": "Lifestyle",
+            "count": 1
+          }
+        ],
+        "sources": [
+          {
+            "source": "Apple customer-review RSS",
+            "count": 6650,
+            "first_review": "2025-11-26T07:55:23-07:00",
+            "last_review": "2026-11-03T11:41:44-07:00"
+          },
+          {
+            "source": "Mendeley 75g52mjmpf v2",
+            "count": 155933,
+            "first_review": null,
+            "last_review": null
+          }
+        ],
+        "snapshot_start": "2026-11-05T00:02:25.679434+00:00",
+        "snapshot_end": "2026-11-05T00:02:25.679636+00:00",
+        "manifest": {
+          "built_at": "2026-11-05T00:23:19.079955+00:00",
+          "apps": 69,
+          "reviews": 162583,
+          "identified_reviews": 6650,
+          "pooled_reviews": 155933,
+          "mendeley_audit": {
+            "raw_columns": [
+              "Title",
+              "Review",
+              "Rating"
+            ],
+            "retained_reviews": 155933,
+            "rejected": {
+              "exact_duplicate_title_text_rating": 3877,
+              "invalid_rating": 36
+            },
+            "original_member": "A Dataset of End-User Reviews from the Apple App S/dataset.csv",
+            "archive_sha256": "446112f4eedccdb4269460d83acd93694e8ded4a0745cdec202e989ac2617be7",
+            "original_data_rows": 159846
+          },
+          "sources": [
+            {
+              "name": "Mendeley iOS reviews v2",
+              "url": "https://data.mendeley.com/datasets/75g52mjmpf/2",
+              "license": "CC BY 4.0",
+              "status": "loaded",
+              "attribution": "Mumrez Khan, 2025, DOI 10.17632/75g52mjmpf.2",
+              "limitations": "Only title, text and rating are present. No app IDs, dates or categories."
+            },
+            {
+              "name": "Apple Search / Lookup API",
+              "url": "https://performance-partners.apple.com/search-api",
+              "status": "loaded",
+              "selection": "Explicit curated seed across categories; live keyword discovery can add apps. Not an exhaustive census."
+            },
+            {
+              "name": "Apple customer-review RSS",
+              "url": "https://itunes.apple.com/us/rss/customerreviews/id=324684580/sortby=mostrecent/json",
+              "status": "loaded",
+              "selection": "Up to two most-recent pages per curated seed app, US storefront; deduplicated."
+            },
+            {
+              "name": "AppGoblin",
+              "url": "https://appgoblin.info/free-app-datasets",
+              "license": "CC BY 4.0",
+              "status": "available to import; not loaded",
+              "limitations": "Free account required for exports. No AppGoblin data is claimed unless imported."
+            }
+          ],
+          "collection_errors": [],
+          "files": {
+            "apps.jsonl.gz": {
+              "bytes": 87743,
+              "sha256": "6edd67fc84c6e68c11998fb113b6b42b327e061614d7b856e83513b7372f8356"
+            },
+            "reviews.jsonl.gz": {
+              "bytes": 20562584,
+              "sha256": "f3979a5537d6c28f5e3ca39ee5f0357891e831dec0d2febee23d36d9f5689698"
+            }
+          }
+        },
+        "limits": [
+          "Broad app discovery is available through Apple's Search API; the packaged snapshot is not the entire App Store.",
+          "The Mendeley CSV has only Title, Review, and Rating. Its app identities, categories, dates, and storefronts are unknown.",
+          "Apple RSS reviews are a bounded sample for the selected storefront, not all users or a complete review history.",
+          "A star rating is not a written-review count. Reviews do not establish downloads, revenue, retention, or market size.",
+          "App descriptions are developer claims. Review comments are user reports, not independently verified product facts."
+        ]
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "b6b257190d70",
+      "started_at": "2026-11-05T00:31:56.954898+00:00",
+      "duration_ms": 132
+    },
+    {
+      "agent": "Lead",
+      "name": "research",
+      "args": {
+        "topic": "Advertised Premium Features",
+        "question": "Analyze the App Store descriptions for Spotify (ID: 324684580) and YouTube (ID: 544007664) to identify their advertised premium subscription features, specifically focusing on ad-free playback, offline listening, and background play.",
+        "researcher": "Researcher 1",
+        "round": 0
+      },
+      "result": {
+        "agent": "Researcher 1",
+        "task": {
+          "topic": "Advertised Premium Features",
+          "question": "Analyze the App Store descriptions for Spotify (ID: 324684580) and YouTube (ID: 544007664) to identify their advertised premium subscription features, specifically focusing on ad-free playback, offline listening, and background play."
+        },
+        "findings": "### Advertised Premium Features\n\nBased on App Store descriptions, both services pitch tiered subscriptions that remove friction and unlock playback capabilities:\n\n* **Spotify Premium (ID: 324684580):** Advertises **ad-free music listening** (\"enjoy your music with no ad interruptions\"), **offline listening** (\"download songs, podcasts, and audiobooks for offline listening, without an internet connection\"), and full on-demand playback alongside superior sound quality and AI DJ features [S2]. \n* **YouTube Premium (ID: 544007664):** Advertises **ad-free viewing** (\"watch videos uninterrupted by ads\"), **background play / lock screen play** (\"while using other apps, or when the screen is locked\"), and **offline downloads** (\"Save videos for when you really need them – like when you’re on a plane or commuting\"), bundled with YouTube Music Premium [S3].\n\n---\n\n### User Reports & Complaints (Identified US Reviews)\n\nUser reviews from identified US storefront samples highlight frequent friction regarding ads, subscription upsells, and playback annoyances:\n\n* **Ad Overload and Unskippable Interruptions:** \n  * Spotify free users report heavy ad frequency, with reviews complaining of *\"Too many ads\"* [S6] and arguing that *\"Non premium users should have a better time with the app\"* [S12].\n  * YouTube users report aggressive ad placement and broken skip functionality, noting instances where mid-roll ads lack progress bars or skip buttons, forcing users to restart videos: *\"whenever there’s an ad in the middle of a video it doesn’t show the progress bar... and the ‘skip’ button doesn’t even appear\"* [S5].\n\n---\n\n### Notes & Limitations\n* **Observed Facts:** App Store metadata explicitly lists ad-free listening, offline downloads, and background/lock-screen playback as paid perks for both apps [S2, S3].\n* **Reported Complaints:** US customer reviews frequently cite excessive ad frequency on free tiers and intrusive ad UI behaviors [S5, S6, S12].\n* **Limitations:** Review samples represent a bounded, storefront-specific snapshot (Apple RSS feed) rather than a complete longitudinal census [S5–S12]. Keyword retrieval counts match occurrences rather than semantic prevalence."
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "f36f503fc142",
+      "started_at": "2026-11-05T00:32:01.266021+00:00",
+      "duration_ms": 5014
+    },
+    {
+      "agent": "Lead",
+      "name": "research",
+      "args": {
+        "topic": "Spotify User Reports on Ads and Subscriptions",
+        "question": "Search US Apple RSS reviews for Spotify (ID: 324684580) using keywords like 'ad', 'premium', 'subscription', 'pay', and 'charge' to identify user complaints regarding unexpected ads, subscription billing, or premium feature failures.",
+        "researcher": "Researcher 2",
+        "round": 0
+      },
+      "result": {
+        "agent": "Researcher 2",
+        "task": {
+          "topic": "Spotify User Reports on Ads and Subscriptions",
+          "question": "Search US Apple RSS reviews for Spotify (ID: 324684580) using keywords like 'ad', 'premium', 'subscription', 'pay', and 'charge' to identify user complaints regarding unexpected ads, subscription billing, or premium feature failures."
+        },
+        "findings": "No supported finding was produced."
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "01b9bd262139",
+      "started_at": "2026-11-05T00:32:01.270163+00:00",
+      "duration_ms": 4980
+    },
+    {
+      "agent": "Lead",
+      "name": "research",
+      "args": {
+        "topic": "YouTube User Reports on Ads and Subscriptions",
+        "question": "Search US Apple RSS reviews for YouTube (ID: 544007664) using keywords like 'ad', 'premium', 'subscription', 'pay', and 'charge' to identify user complaints regarding ad frequency, premium subscription issues, or background play failures.",
+        "researcher": "Researcher 3",
+        "round": 0
+      },
+      "result": {
+        "agent": "Researcher 3",
+        "task": {
+          "topic": "YouTube User Reports on Ads and Subscriptions",
+          "question": "Search US Apple RSS reviews for YouTube (ID: 544007664) using keywords like 'ad', 'premium', 'subscription', 'pay', and 'charge' to identify user complaints regarding ad frequency, premium subscription issues, or background play failures."
+        },
+        "findings": "### Advertised Premium Features\n\n*   **Spotify (Music and Podcasts):** Advertises an extensive library of millions of songs, albums, and original podcasts, personalized recommendations, offline listening/downloading, and audiobooks access via Spotify Premium [S2].\n*   **YouTube:** Advertises video discovery across music, gaming, news, and learning, personal recommendations, channel subscriptions, content creation/upload tools, and YouTube Premium upgrades for ad-free viewing, background play, and offline downloads (implied by user expectation and standard feature lists).\n\n---\n\n### User Reports on Ads and Subscriptions\n\n#### YouTube User Complaints\n*   **Ad Frequency & Unskippable Ads:** Users report aggressive ad placements, such as multiple unskippable 30-second ad breaks during a 10-minute video [S16], unskippable mid-roll ads lacking progress bars or skip buttons [S5], and inappropriate/NSFW advertisements [S13, S14].\n*   **Premium Billing & Cost:** Subscribers criticize YouTube Premium’s pricing as \"extortionate\" [S19] and complain about unexpected renewals or lack of control over billing cycles through Apple [S18].\n*   **Feature Integration & UI Friction:** Paying subscribers report frustration when forced to view unwanted content like Shorts or promotional banners despite paying for Premium [S17, S20], alongside bugs affecting background playback and navigation.\n\n#### Spotify User Complaints\n*   **Ad Frequency (Free Tier):** Non-premium users frequently complain about heavy ad density, noting ads appearing every 2 to 3 songs [S23, S24, S26], multi-ad blocks lasting 30–60 seconds [S26], and restrictive playback limits [S26].\n*   **Promoted Content & Ads for Subscribers:** Some paying subscribers report frustration with promotional music pushes and extra tabs/features that clutter the playback experience [S31].\n\n---\n\n### Summary Findings & Limitations\n\n*   **Observed Facts:** Both apps offer free ad-supported tiers alongside paid monthly subscriptions designed to remove ads and unlock offline or background capabilities.\n*   **Reported Complaints:** Users across both apps express strong dissatisfaction with ad volume on free tiers and intrusive ad glitches. YouTube subscribers voice specific frustration regarding billing management [S18], forced UI elements/Shorts [S17], and unskippable mid-roll formats [S5].\n*   **Limitations:** This analysis relies exclusively on a bounded sample of recent US Apple RSS customer reviews [S5, S13–S33] and developer listings [S2, S3]. Review complaints are user-submitted reports and cannot verify real-world financial metrics, technical root causes, or population-wide sentiment."
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "deb9a893d08b",
+      "started_at": "2026-11-05T00:32:01.273736+00:00",
+      "duration_ms": 6255
+    },
+    {
+      "agent": "Researcher 1",
+      "name": "get_app",
+      "args": {
+        "app_id": "324684580"
+      },
+      "result": {
+        "id": "324684580",
+        "name": "Spotify: Music and Podcasts",
+        "category": "Music",
+        "description": "With the Spotify app, you can explore an extensive library of music and podcasts for free. Curate the best playlists and stream millions of free songs, albums, and original podcasts on your phone or tablet. Subscribe to Spotify Premium to download and listen offline wherever you are, and unlock our catalog of audiobooks.\n\nWhy choose Spotify as your go-to music and podcast app? Here, you can:\n• Listen to over 100 million songs and 6 million podcast titles\n• Explore our selection of specially-crafted artist playlists\n• Easily search for your favorite songs, albums, artists, and podcasts\n• Discover personalized music recommendations tailored to your unique taste\n• Subscribe to your favorite free podcasts so you never miss an episode, and even curate your own podcast library\n\nSpotify Free is more than a music player - find the sounds you love and stream music and podcasts online, for free. Enjoy personalized playlists or curate and share your own, discover the hottest new releases, explore upcoming events from your favorites, and more.\n\n• Stream millions of free songs and podcasts\n• Create playlists with your favorite music\n• Share songs and playlists with friends and family (feature restrictions may apply in some regions)\n• Discover personalized playlists made just for you, and collaborate on playlists with your friends\n• Enjoy your personal Discover Weekly playlist every week\n• Stay in the know with the Release Radar and New Music Friday playlists\n• Find nearby events and gigs by your favorite artists\n• See your most played songs, genres, artists, and more with yearly Spotify Wrapped\n• Stream music across your devices with Spotify\n• Use Spotify Connect and enjoy listening on smart speakers, desktop, laptop, smart TV, Chromecast, PlayStation®, Xbox®, smartwatch, in your car, and more - limited number of device models apply\n\nSpotify Premium - a great way to enjoy the benefits of an offline music player, and stream music without WiFi. By pressing download, you can access your songs, playlists, podcasts, and audiobooks offline, wherever you are.\n• Listen to music, podcasts, and audiobooks - all in one place\n• Ad-free music listening: enjoy your music with no ad interruptions\n• Enjoy full on-demand playback\n• Audiobooks in Premium are currently available in the US, UK, Australia, Ireland, New Zealand, and Canada. Discover 250,000+ audiobook titles with 15 hours/month of available listening for Premium Individual subscribers and Duo & Family plan managers.\n• Superior sound quality on supported devices\n• AI DJ: a personalized guide that knows your music taste so well it can choose what to play for you\n• Enjoy on desktop, phone, tablet, computer, smartwatch, and in your car\n• Listen and control the listening session together by hosting a Jam in real time with friends\n• Download songs, podcasts, and audiobooks for offline listening, without an internet connection\n• No contract required - cancel your subscription whenever you want\n\nSpotify lets you play music wherever you are. Listen to your favorite songs and discover new music, podcasts, and audiobooks with the Spotify app!\n\nLOVE SPOTIFY?\nFollow us on Instagram: https://www.instagram.com/spotify\nFollow us on TikTok: https://www.tiktok.com/@spotify",
+        "developer": "Spotify",
+        "price": 0.0,
+        "currency": "USD",
+        "rating": 4.76983,
+        "rating_count": 42941843,
+        "version": "9.1.94",
+        "released": "2011-07-14T11:22:37Z",
+        "updated": "2026-10-23T17:59:53Z",
+        "url": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580?uo=4",
+        "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/f2/6a/8bf26ab9-3ced-cb5c-a2b3-19f65e7f5cc6/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+        "fetched_at": "2026-11-05T00:02:25.679434+00:00",
+        "source": "Apple Search API",
+        "citation": "S2"
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "6aafbc05e9dd",
+      "started_at": "2026-11-05T00:32:02.114229+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_apps",
+      "args": {
+        "query": "Spotify"
+      },
+      "result": {
+        "apps": [
+          {
+            "id": "324684580",
+            "name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "description": "With the Spotify app, you can explore an extensive library of music and podcasts for free. Curate the best playlists and stream millions of free songs, albums, and original podcasts on your phone or tablet. Subscribe to Spotify Premium to download and listen offline wherever you are, and unlock our catalog of audiobooks.\n\nWhy choose Spotify as your go-to music and podcast app? Here, you can:\n• Listen to over 100 million songs and 6 million podcast titles\n• Explore our selection of specially-crafted artist playlists\n• Easily search for your favorite songs, albums, artists, and podcasts\n• Discover personalized music recommendations tailored to your unique taste\n• Subscribe to your favorite free podcasts so you never miss an episode, and even curate your own podcast library\n\nSpotify Free is more than a music player - find the sounds you love and stream music and podcasts online, for free. Enjoy personalized playlists or curate and share your own, discover the hottest new releases, explore upcoming events from your favorites, and more.\n\n• Stream millions of free songs and podcasts\n• Create playlists with your favorite music\n• Share songs and playlists with friends and family (feature restrictions may apply in some regions)\n• Discover personalized playlists made just for you, and collaborate on playlists with your friends\n• Enjoy your personal Discover Weekly playlist every week\n• S",
+            "developer": "Spotify",
+            "price": 0.0,
+            "currency": "USD",
+            "rating": 4.76983,
+            "rating_count": 42941843,
+            "version": "9.1.94",
+            "released": "2011-07-14T11:22:37Z",
+            "updated": "2026-10-23T17:59:53Z",
+            "url": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580?uo=4",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/f2/6a/8bf26ab9-3ced-cb5c-a2b3-19f65e7f5cc6/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+            "fetched_at": "2026-11-05T00:02:25.679434+00:00",
+            "source": "Apple Search API",
+            "review_sample_count": 100,
+            "citation": "S2"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "53b18a413584",
+      "started_at": "2026-11-05T00:32:02.212243+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_apps",
+      "args": {
+        "query": "YouTube"
+      },
+      "result": {
+        "apps": [
+          {
+            "id": "544007664",
+            "name": "YouTube",
+            "category": "Photo & Video",
+            "description": "Get the official YouTube app on iPhones and iPads. See what the world is watching -- from the hottest music videos to what’s popular in gaming, fashion, beauty, news, learning and more. Subscribe to channels you love, create content of your own, share with friends, and watch on any device.\n\nWatch and subscribe\n● Browse personal recommendations on Home\n● See the latest from your favorite channels in Subscriptions\n● Look up videos you’ve watched, liked, and saved for later in Library\n\nExplore different topics, what’s popular, and on the rise (available in select countries)\n● Stay up to date on what’s popular in music, gaming, beauty, news, learning and more\n● See what’s trending on YouTube and around the world on Explore\n● Learn about the coolest Creators, Gamers, and Artists on the Rise (available in select countries)\n\nConnect with the YouTube community\n● Keep up with your favorites creators with Posts, Stories, Premieres, and Live streams\n● Join the conversation with comments and interact with creators and other community members\n\nCreate content from your mobile device\n● Create or upload your own videos directly in the app\n● Engage with your audience in real time with live streaming right from the app\n\nFind the experience that fits you and your family (available in select countries)\n● Every family has their own approach to online video. Learn about your options: the YouTube Kid",
+            "developer": "Google",
+            "price": 0.0,
+            "currency": "USD",
+            "rating": 4.66432,
+            "rating_count": 49732554,
+            "version": "21.44.4",
+            "released": "2012-09-11T07:23:19Z",
+            "updated": "2026-11-02T23:52:24Z",
+            "url": "https://apps.apple.com/us/app/youtube/id544007664?uo=4",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/56/df/be56dfa2-70bd-feb2-b666-38277eb5be3b/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/100x100bb.jpg",
+            "fetched_at": "2026-11-05T00:02:25.679465+00:00",
+            "source": "Apple Search API",
+            "review_sample_count": 100,
+            "citation": "S3"
+          },
+          {
+            "id": "1641486558",
+            "name": "Temu: Shop Like a Billionaire",
+            "category": "Shopping",
+            "description": "Shop on Temu for exclusive offers. \n\nNo matter what you're looking for, Temu has you covered, including fashion, home decor, handmade crafts, beauty & cosmetics, clothing, shoes, and more.\n\nDownload Temu today and enjoy incredible deals daily.\n\nWIDE SELECTION\nDiscover thousands of new products and shops.\n\nCONVENIENCE\nFast and secure checkout.\nFree shipping & returns within 90 days.\n*Other conditions may apply\n\nVisit temu.com or follow us on:\nInstagram: https://www.instagram.com/temu/\nTikTok: https://www.tiktok.com/@temu \nFacebook: https://www.facebook.com/shoptemu\nYoutube: https://www.youtube.com/@temu",
+            "developer": "Temu",
+            "price": 0.0,
+            "currency": "USD",
+            "rating": 4.65725,
+            "rating_count": 2250439,
+            "version": "4.95.0",
+            "released": "2022-08-31T07:00:00Z",
+            "updated": "2026-11-04T04:34:04Z",
+            "url": "https://apps.apple.com/us/app/temu-shop-like-a-billionaire/id1641486558?uo=4",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/99/fa/1a99faf0-689d-6ef5-6bff-b16162fbd4c1/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+            "fetched_at": "2026-11-05T00:02:25.679595+00:00",
+            "source": "Apple Search API",
+            "review_sample_count": 100,
+            "citation": "S4"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "af751c3ec33c",
+      "started_at": "2026-11-05T00:32:02.213461+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "get_app",
+      "args": {
+        "app_id": "324684580"
+      },
+      "result": {
+        "id": "324684580",
+        "name": "Spotify: Music and Podcasts",
+        "category": "Music",
+        "description": "With the Spotify app, you can explore an extensive library of music and podcasts for free. Curate the best playlists and stream millions of free songs, albums, and original podcasts on your phone or tablet. Subscribe to Spotify Premium to download and listen offline wherever you are, and unlock our catalog of audiobooks.\n\nWhy choose Spotify as your go-to music and podcast app? Here, you can:\n• Listen to over 100 million songs and 6 million podcast titles\n• Explore our selection of specially-crafted artist playlists\n• Easily search for your favorite songs, albums, artists, and podcasts\n• Discover personalized music recommendations tailored to your unique taste\n• Subscribe to your favorite free podcasts so you never miss an episode, and even curate your own podcast library\n\nSpotify Free is more than a music player - find the sounds you love and stream music and podcasts online, for free. Enjoy personalized playlists or curate and share your own, discover the hottest new releases, explore upcoming events from your favorites, and more.\n\n• Stream millions of free songs and podcasts\n• Create playlists with your favorite music\n• Share songs and playlists with friends and family (feature restrictions may apply in some regions)\n• Discover personalized playlists made just for you, and collaborate on playlists with your friends\n• Enjoy your personal Discover Weekly playlist every week\n• Stay in the know with the Release Radar and New Music Friday playlists\n• Find nearby events and gigs by your favorite artists\n• See your most played songs, genres, artists, and more with yearly Spotify Wrapped\n• Stream music across your devices with Spotify\n• Use Spotify Connect and enjoy listening on smart speakers, desktop, laptop, smart TV, Chromecast, PlayStation®, Xbox®, smartwatch, in your car, and more - limited number of device models apply\n\nSpotify Premium - a great way to enjoy the benefits of an offline music player, and stream music without WiFi. By pressing download, you can access your songs, playlists, podcasts, and audiobooks offline, wherever you are.\n• Listen to music, podcasts, and audiobooks - all in one place\n• Ad-free music listening: enjoy your music with no ad interruptions\n• Enjoy full on-demand playback\n• Audiobooks in Premium are currently available in the US, UK, Australia, Ireland, New Zealand, and Canada. Discover 250,000+ audiobook titles with 15 hours/month of available listening for Premium Individual subscribers and Duo & Family plan managers.\n• Superior sound quality on supported devices\n• AI DJ: a personalized guide that knows your music taste so well it can choose what to play for you\n• Enjoy on desktop, phone, tablet, computer, smartwatch, and in your car\n• Listen and control the listening session together by hosting a Jam in real time with friends\n• Download songs, podcasts, and audiobooks for offline listening, without an internet connection\n• No contract required - cancel your subscription whenever you want\n\nSpotify lets you play music wherever you are. Listen to your favorite songs and discover new music, podcasts, and audiobooks with the Spotify app!\n\nLOVE SPOTIFY?\nFollow us on Instagram: https://www.instagram.com/spotify\nFollow us on TikTok: https://www.tiktok.com/@spotify",
+        "developer": "Spotify",
+        "price": 0.0,
+        "currency": "USD",
+        "rating": 4.76983,
+        "rating_count": 42941843,
+        "version": "9.1.94",
+        "released": "2011-07-14T11:22:37Z",
+        "updated": "2026-10-23T17:59:53Z",
+        "url": "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580?uo=4",
+        "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/f2/6a/8bf26ab9-3ced-cb5c-a2b3-19f65e7f5cc6/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+        "fetched_at": "2026-11-05T00:02:25.679434+00:00",
+        "source": "Apple Search API",
+        "citation": "S2"
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "b4463d2dcafc",
+      "started_at": "2026-11-05T00:32:02.346503+00:00",
+      "duration_ms": 0
+    },
+    {
+      "agent": "Researcher 1",
+      "name": "get_app",
+      "args": {
+        "app_id": "544007664"
+      },
+      "result": {
+        "id": "544007664",
+        "name": "YouTube",
+        "category": "Photo & Video",
+        "description": "Get the official YouTube app on iPhones and iPads. See what the world is watching -- from the hottest music videos to what’s popular in gaming, fashion, beauty, news, learning and more. Subscribe to channels you love, create content of your own, share with friends, and watch on any device.\n\nWatch and subscribe\n● Browse personal recommendations on Home\n● See the latest from your favorite channels in Subscriptions\n● Look up videos you’ve watched, liked, and saved for later in Library\n\nExplore different topics, what’s popular, and on the rise (available in select countries)\n● Stay up to date on what’s popular in music, gaming, beauty, news, learning and more\n● See what’s trending on YouTube and around the world on Explore\n● Learn about the coolest Creators, Gamers, and Artists on the Rise (available in select countries)\n\nConnect with the YouTube community\n● Keep up with your favorites creators with Posts, Stories, Premieres, and Live streams\n● Join the conversation with comments and interact with creators and other community members\n\nCreate content from your mobile device\n● Create or upload your own videos directly in the app\n● Engage with your audience in real time with live streaming right from the app\n\nFind the experience that fits you and your family (available in select countries)\n● Every family has their own approach to online video. Learn about your options: the YouTube Kids app or a new parent supervised experience on YouTube at youtube.com/myfamily\n\nSupport creators you love with channel memberships (available in select countries)\n● Join channels that offer paid monthly memberships and support their work\n● Get access to exclusive perks from the channel & become part of their members community\n● Stand out in comments and live chats with a loyalty badge next to your username\n\nUpgrade to YouTube Premium (available in select countries)\n● Watch videos uninterrupted by ads, while using other apps, or when the screen is locked\n● Save videos for when you really need them – like when you’re on a plane or commuting\n● Get access to YouTube Music Premium as part of your benefits\n\nNote: If you subscribe via Apple, payment will be charged to App Store Account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Account will be charged for renewal within 24 hours prior to the end of the current period at the rate of the selected plan. Subscriptions and auto-renewal may be managed by going to Account Settings after purchase.\n\nYouTube paid service terms: https://www.youtube.com/t/terms_paidservice.\nPrivacy policy: https://www.google.com/policies/privacy",
+        "developer": "Google",
+        "price": 0.0,
+        "currency": "USD",
+        "rating": 4.66432,
+        "rating_count": 49732554,
+        "version": "21.44.4",
+        "released": "2012-09-11T07:23:19Z",
+        "updated": "2026-11-02T23:52:24Z",
+        "url": "https://apps.apple.com/us/app/youtube/id544007664?uo=4",
+        "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/56/df/be56dfa2-70bd-feb2-b666-38277eb5be3b/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/100x100bb.jpg",
+        "fetched_at": "2026-11-05T00:02:25.679465+00:00",
+        "source": "Apple Search API",
+        "citation": "S3"
+      },
+      "status": "complete",
+      "turn": 1,
+      "id": "cd7e85ab8f03",
+      "started_at": "2026-11-05T00:32:02.862310+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "fetch_reviews",
+      "args": {
+        "app_id": "324684580",
+        "country": "us"
+      },
+      "result": {
+        "app_id": "324684580",
+        "country": "us",
+        "fetched": 0,
+        "stored_reviews": 100,
+        "coverage": "Identified reviews are already loaded. Use the stored snapshot for a reproducible comparison; this tool only fetches missing coverage."
+      },
+      "status": "complete",
+      "turn": 1,
+      "id": "b90987c2990a",
+      "started_at": "2026-11-05T00:32:03.007679+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "fetch_reviews",
+      "args": {
+        "app_id": "544007664",
+        "country": "us"
+      },
+      "result": {
+        "app_id": "544007664",
+        "country": "us",
+        "fetched": 0,
+        "stored_reviews": 100,
+        "coverage": "Identified reviews are already loaded. Use the stored snapshot for a reproducible comparison; this tool only fetches missing coverage."
+      },
+      "status": "complete",
+      "turn": 1,
+      "id": "c7ebc815fc98",
+      "started_at": "2026-11-05T00:32:03.008325+00:00",
+      "duration_ms": 0
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "fetch_reviews",
+      "args": {
+        "country": "us",
+        "app_id": "324684580"
+      },
+      "result": {
+        "app_id": "324684580",
+        "country": "us",
+        "fetched": 0,
+        "stored_reviews": 100,
+        "coverage": "Identified reviews are already loaded. Use the stored snapshot for a reproducible comparison; this tool only fetches missing coverage."
+      },
+      "status": "complete",
+      "turn": 1,
+      "id": "0217a22e697c",
+      "started_at": "2026-11-05T00:32:03.105436+00:00",
+      "duration_ms": 0
+    },
+    {
+      "agent": "Researcher 1",
+      "name": "search_reviews",
+      "args": {
+        "app_ids": [
+          "324684580",
+          "544007664"
+        ],
+        "query": "ads subscription premium offline background",
+        "corpus": "identified"
+      },
+      "result": {
+        "matched": 59,
+        "returned": 8,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:544007664:14746967194",
+            "app_id": "544007664",
+            "title": "Can’t skip ads",
+            "text": "Lately, beginning Oct 2026, whenever there’s an ad in the middle of a video it doesn’t show the progress bar at the bottom and the “skip” button doesn’t even appear. I get stuck watching ads for 2-3 minutes unless I completely close out the app. Then, then I go back to the video I was watching it starts it from the very beginning.",
+            "rating": 2,
+            "date": "2026-11-03T11:32:01-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S5"
+          },
+          {
+            "id": "apple:us:324684580:14746946927",
+            "app_id": "324684580",
+            "title": "Ads all day",
+            "text": "Too many ads, I’d rather use SoundCloud, this is still\nTrue in November 2026, stop asking me to review.",
+            "rating": 1,
+            "date": "2026-11-03T11:25:23-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S6"
+          },
+          {
+            "id": "apple:us:544007664:14746930780",
+            "app_id": "544007664",
+            "title": "Update terrible UX",
+            "text": "What were you thinking??? The UX now is terrible. At least let premium members customize their experience. the tabs are not intuitive to find. Stop testing stupid UI changes every week. It is a horrible experience.",
+            "rating": 1,
+            "date": "2026-11-03T11:20:09-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S7"
+          },
+          {
+            "id": "apple:us:544007664:14746922691",
+            "app_id": "544007664",
+            "title": "Where is my cheese!?",
+            "text": "I use the subscription button to navigate the app and now it's gone and I am livid. I don't create content and don't watch shorts. Remove those tabs! I only want home, subscriptions, and profile! GAAAAAAAAAH",
+            "rating": 1,
+            "date": "2026-11-03T11:17:30-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S8"
+          },
+          {
+            "id": "apple:us:544007664:14746921732",
+            "app_id": "544007664",
+            "title": "Review",
+            "text": "Too many ads",
+            "rating": 2,
+            "date": "2026-11-03T11:17:12-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S9"
+          },
+          {
+            "id": "apple:us:544007664:14746900222",
+            "app_id": "544007664",
+            "title": "Bring back subscription tab",
+            "text": "Removing the subscription tab is an automatic 1-star review from me.",
+            "rating": 1,
+            "date": "2026-11-03T11:10:18-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S10"
+          },
+          {
+            "id": "apple:us:544007664:14746842025",
+            "app_id": "544007664",
+            "title": "Update UI is Trash",
+            "text": "They moved the subscription button from the bottom right to the upper middle. No more easy navigating one handed, everything is buried. All of this to add features for going live and creating content. If you're a content creator, less subscribers will watch your stuff due to this update. YouTube is creating solutions to problems that done exist with every update. What a trash UI",
+            "rating": 1,
+            "date": "2026-11-03T10:51:41-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S11"
+          },
+          {
+            "id": "apple:us:324684580:14746841903",
+            "app_id": "324684580",
+            "title": "Too many ads",
+            "text": "Non premium users should have a better time with the app. But regardless I love spotify",
+            "rating": 3,
+            "date": "2026-11-03T10:51:39-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S12"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "20624ee27155",
+      "started_at": "2026-11-05T00:32:03.966786+00:00",
+      "duration_ms": 19
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "search_apps",
+      "args": {
+        "query": "YouTube"
+      },
+      "result": {
+        "apps": [
+          {
+            "id": "544007664",
+            "name": "YouTube",
+            "category": "Photo & Video",
+            "description": "Get the official YouTube app on iPhones and iPads. See what the world is watching -- from the hottest music videos to what’s popular in gaming, fashion, beauty, news, learning and more. Subscribe to channels you love, create content of your own, share with friends, and watch on any device.\n\nWatch and subscribe\n● Browse personal recommendations on Home\n● See the latest from your favorite channels in Subscriptions\n● Look up videos you’ve watched, liked, and saved for later in Library\n\nExplore different topics, what’s popular, and on the rise (available in select countries)\n● Stay up to date on what’s popular in music, gaming, beauty, news, learning and more\n● See what’s trending on YouTube and around the world on Explore\n● Learn about the coolest Creators, Gamers, and Artists on the Rise (available in select countries)\n\nConnect with the YouTube community\n● Keep up with your favorites creators with Posts, Stories, Premieres, and Live streams\n● Join the conversation with comments and interact with creators and other community members\n\nCreate content from your mobile device\n● Create or upload your own videos directly in the app\n● Engage with your audience in real time with live streaming right from the app\n\nFind the experience that fits you and your family (available in select countries)\n● Every family has their own approach to online video. Learn about your options: the YouTube Kid",
+            "developer": "Google",
+            "price": 0.0,
+            "currency": "USD",
+            "rating": 4.66432,
+            "rating_count": 49732554,
+            "version": "21.44.4",
+            "released": "2012-09-11T07:23:19Z",
+            "updated": "2026-11-02T23:52:24Z",
+            "url": "https://apps.apple.com/us/app/youtube/id544007664?uo=4",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/be/56/df/be56dfa2-70bd-feb2-b666-38277eb5be3b/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/100x100bb.jpg",
+            "fetched_at": "2026-11-05T00:02:25.679465+00:00",
+            "source": "Apple Search API",
+            "review_sample_count": 100,
+            "citation": "S3"
+          },
+          {
+            "id": "1641486558",
+            "name": "Temu: Shop Like a Billionaire",
+            "category": "Shopping",
+            "description": "Shop on Temu for exclusive offers. \n\nNo matter what you're looking for, Temu has you covered, including fashion, home decor, handmade crafts, beauty & cosmetics, clothing, shoes, and more.\n\nDownload Temu today and enjoy incredible deals daily.\n\nWIDE SELECTION\nDiscover thousands of new products and shops.\n\nCONVENIENCE\nFast and secure checkout.\nFree shipping & returns within 90 days.\n*Other conditions may apply\n\nVisit temu.com or follow us on:\nInstagram: https://www.instagram.com/temu/\nTikTok: https://www.tiktok.com/@temu \nFacebook: https://www.facebook.com/shoptemu\nYoutube: https://www.youtube.com/@temu",
+            "developer": "Temu",
+            "price": 0.0,
+            "currency": "USD",
+            "rating": 4.65725,
+            "rating_count": 2250439,
+            "version": "4.95.0",
+            "released": "2022-08-31T07:00:00Z",
+            "updated": "2026-11-04T04:34:04Z",
+            "url": "https://apps.apple.com/us/app/temu-shop-like-a-billionaire/id1641486558?uo=4",
+            "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1a/99/fa/1a99faf0-689d-6ef5-6bff-b16162fbd4c1/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+            "fetched_at": "2026-11-05T00:02:25.679595+00:00",
+            "source": "Apple Search API",
+            "review_sample_count": 100,
+            "citation": "S4"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "365bd39d05fd",
+      "started_at": "2026-11-05T00:32:03.992826+00:00",
+      "duration_ms": 1
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_reviews",
+      "args": {
+        "app_ids": [
+          "544007664"
+        ],
+        "query": "ad"
+      },
+      "result": {
+        "matched": 5,
+        "returned": 5,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:544007664:14746967194",
+            "app_id": "544007664",
+            "title": "Can’t skip ads",
+            "text": "Lately, beginning Oct 2026, whenever there’s an ad in the middle of a video it doesn’t show the progress bar at the bottom and the “skip” button doesn’t even appear. I get stuck watching ads for 2-3 minutes unless I completely close out the app. Then, then I go back to the video I was watching it starts it from the very beginning.",
+            "rating": 2,
+            "date": "2026-11-03T11:32:01-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S5"
+          },
+          {
+            "id": "apple:us:544007664:14746715716",
+            "app_id": "544007664",
+            "title": "Money hungry pigs",
+            "text": "Mobile version of this app is terrible now and it’s purely because of the advertising now. Over sexual ads aloud to be showed, back to back ads you can’t skip and more, and I think it’s bs that there is ads that glitch out to “accidentally” make you engage with the ad and end up opening up the link. Pitiful, i hope to  see a lawsuit coming against yall soon",
+            "rating": 1,
+            "date": "2026-11-03T10:12:08-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S13"
+          },
+          {
+            "id": "apple:us:544007664:14746638870",
+            "app_id": "544007664",
+            "title": "Adtube and ui disaster",
+            "text": "Immediately serves you an nsfw ad no matter what you do, horrible ui changes daily, subscription no longer on the bottom bar.  Reporting an ad doesnt even make it go away. This app is terrible, use a browser instead.",
+            "rating": 1,
+            "date": "2026-11-03T09:48:31-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S14"
+          },
+          {
+            "id": "apple:us:544007664:14746637377",
+            "app_id": "544007664",
+            "title": "New update is awful",
+            "text": "The new UI is terrible and unintuitive. It’s so sensitive that scrolling selects things instead of scrolling so I have to exit out of every video and ad I try to scroll past. It makes me want to spend LESS time on the app because it’s so frustrating!",
+            "rating": 1,
+            "date": "2026-11-03T09:48:03-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S15"
+          },
+          {
+            "id": "apple:us:544007664:14746533945",
+            "app_id": "544007664",
+            "title": "Greedy Company",
+            "text": "The ads have been getting outrageous. I can’t even get through a 10 minute video without 2 ad breaks of 2 unskippable 30 second ads. This isn’t cable tv this is YouTube",
+            "rating": 1,
+            "date": "2026-11-03T09:16:43-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S16"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "8070d01b4600",
+      "started_at": "2026-11-05T00:32:04.178669+00:00",
+      "duration_ms": 3
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_reviews",
+      "args": {
+        "query": "premium",
+        "app_ids": [
+          "544007664"
+        ]
+      },
+      "result": {
+        "matched": 7,
+        "returned": 7,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:544007664:14746930780",
+            "app_id": "544007664",
+            "title": "Update terrible UX",
+            "text": "What were you thinking??? The UX now is terrible. At least let premium members customize their experience. the tabs are not intuitive to find. Stop testing stupid UI changes every week. It is a horrible experience.",
+            "rating": 1,
+            "date": "2026-11-03T11:20:09-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S7"
+          },
+          {
+            "id": "apple:us:544007664:14746726941",
+            "app_id": "544007664",
+            "title": "Used to be great. Now not worth premium",
+            "text": "This app used to be fantastic. I could see creators from around the world I could learn I could be entertained. And it used to be worth the premium cost to have it without ads.  But now I can’t control what I see in my feed.  Now, YouTube forces shorts on me. I never asked for shorts. I don’t want shorts.  I can’t get rid of shorts, even though I pay YouTube every month for my premium subscription. I can’t control the toolbar at the bottom. And now they’ve hidden subscriptions. It’s like they’re trying to systematically destroy everything that made YouTube great. They are alienating paying customers in the process.",
+            "rating": 2,
+            "date": "2026-11-03T10:15:40-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S17"
+          },
+          {
+            "id": "apple:us:544007664:14746677030",
+            "app_id": "544007664",
+            "title": "Billing",
+            "text": "Your customer support has little knowledge on how your billing works and every time you mess up my premium they basically throw their hands up and point to Apple Billing. I’ve never heard of a company not managing their own sales and customer service with the sale itself. That’s why I stopped buying premium and went to Spotify and Rumble. Both of their upgrades are cheaper than your premium and they know how long customers have to cancel. By the way it’s only 48hours. What kind of company bills customers for the next month after 48hrs? I have 2 days to cancel if I don’t want premium next month, 99% of other companies give you 1-2 weeks. Just because Google owns the internet like the Mafia owned concrete in 1970’s New York doesn’t mean you have to use Mafia tactics and randomly billing me almost $25 without any warning at all not even through email is a Mafia tactic. Then you have the audacity to censor our comments. You can keep your premium YouTube for now.",
+            "rating": 1,
+            "date": "2026-11-03T10:00:13-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S18"
+          },
+          {
+            "id": "apple:us:544007664:14746416765",
+            "app_id": "544007664",
+            "title": "PLEASE FIX PICTURE-IN-PICTURE!!!",
+            "text": "Much of the rest of the app is great besides the extortionate cost of Premium and the obscene volume of ads if you can’t afford because you’re poor, like me.\n\nJust fix picture-in-picture. It’s what keeps me on the app. And maybe add playing while the screen is off but without Premium. It makes putting up with all your advertisements worth the unending pain they cause.\n\nUpdate: FIX SUBSCRIPTIONS! This app isn’t just a timesink to me now. Now it’s a pain to navigate to the channels I want to watch.",
+            "rating": 1,
+            "date": "2026-11-03T08:42:05-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S19"
+          },
+          {
+            "id": "apple:us:544007664:14746351300",
+            "app_id": "544007664",
+            "title": "Ads making videos unwatchable",
+            "text": "I’ve been having ads restart, reorient my screen layout, and now we have banners that don’t leave the video that I have to x out of. I used to go to YouTube for workout videos but now if I want to see the workout through I have to pay a premium or walk over to skip extra long ads repeatedly for a short video. Just put them on the front end already.",
+            "rating": 2,
+            "date": "2026-11-03T08:23:13-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S20"
+          },
+          {
+            "id": "apple:us:544007664:14746328513",
+            "app_id": "544007664",
+            "title": "Too many ads now",
+            "text": "There is way too many ads now.  I understand they want to push YouTube premium, but they are overdoing it with the advertisements.",
+            "rating": 1,
+            "date": "2026-11-03T08:16:41-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S21"
+          },
+          {
+            "id": "apple:us:544007664:14746194551",
+            "app_id": "544007664",
+            "title": "Last few releases are still buggy",
+            "text": "Longtime YouTube premium user. Donpove the app, but last few releases have been very buggy. Can see full comments is my latest gripe. Fix it so I can change this review. \n\nAre you using Gemini to code it?",
+            "rating": 1,
+            "date": "2026-11-03T07:38:31-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S22"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "87504438dc81",
+      "started_at": "2026-11-05T00:32:04.181513+00:00",
+      "duration_ms": 2
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_reviews",
+      "args": {
+        "query": "ad",
+        "app_ids": [
+          "324684580"
+        ]
+      },
+      "result": {
+        "matched": 4,
+        "returned": 4,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:324684580:14746901999",
+            "app_id": "324684580",
+            "title": "Music",
+            "text": "You guys give me a ad every other song or after 3 which isn’t 30mins, you said you get a ad every 30 mins not 10.",
+            "rating": 2,
+            "date": "2026-11-03T11:10:51-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S23"
+          },
+          {
+            "id": "apple:us:324684580:14746332993",
+            "app_id": "324684580",
+            "title": "Too Many Ads",
+            "text": "I love spotify lol but the amount of ads is concerning—there's an ad every 3 songs",
+            "rating": 4,
+            "date": "2026-11-03T08:17:57-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S24"
+          },
+          {
+            "id": "apple:us:324684580:14746250709",
+            "app_id": "324684580",
+            "title": "Ugh",
+            "text": "It’s good when you have premium and you’re forced to have it or you will just be listening to the same ad over and over while the shuffle feature sucks too",
+            "rating": 2,
+            "date": "2026-11-03T07:54:23-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S25"
+          },
+          {
+            "id": "apple:us:324684580:14746239444",
+            "app_id": "324684580",
+            "title": "The ads",
+            "text": "Besides having every song/podcast in the known universe, we have to talk about the ad rate. If you don’t have premium, you have a certain amount of songs you can listen to a day, plus, if you have set it for long enough, you get add after every song. Mostly ranging from 2-4 ads that span 30-60 seconds. Still better than Apple Music.",
+            "rating": 4,
+            "date": "2026-11-03T07:51:12-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S26"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "f2a23319354c",
+      "started_at": "2026-11-05T00:32:04.183773+00:00",
+      "duration_ms": 2
+    },
+    {
+      "agent": "Researcher 3",
+      "name": "search_reviews",
+      "args": {
+        "app_ids": [
+          "324684580"
+        ],
+        "query": "premium"
+      },
+      "result": {
+        "matched": 15,
+        "returned": 8,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:324684580:14746841903",
+            "app_id": "324684580",
+            "title": "Too many ads",
+            "text": "Non premium users should have a better time with the app. But regardless I love spotify",
+            "rating": 3,
+            "date": "2026-11-03T10:51:39-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S12"
+          },
+          {
+            "id": "apple:us:324684580:14746772840",
+            "app_id": "324684580",
+            "title": "LESS ADS PLEASE",
+            "text": "I really need less adds and more freedom for non-premium users",
+            "rating": 3,
+            "date": "2026-11-03T10:30:03-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S27"
+          },
+          {
+            "id": "apple:us:324684580:14746663931",
+            "app_id": "324684580",
+            "title": "Review",
+            "text": "Spotify premium is 5 stars Spotify without premium is 3 stars",
+            "rating": 5,
+            "date": "2026-11-03T09:56:13-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S28"
+          },
+          {
+            "id": "apple:us:324684580:14746614978",
+            "app_id": "324684580",
+            "title": "Spotify safe my life",
+            "text": "Kinda sucks if you don’t have premium but it’s not that expensive and they have student discount I’ve had Spotify since 2022 and I’ve never once wanted to switch I love it soo much and the wrapped is so cute it also tell you soo much stuff about your music taste",
+            "rating": 5,
+            "date": "2026-11-03T09:41:15-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S29"
+          },
+          {
+            "id": "apple:us:324684580:14746613363",
+            "app_id": "324684580",
+            "title": "Horrible",
+            "text": "Useless if you’re not buying the premium",
+            "rating": 1,
+            "date": "2026-11-03T09:40:45-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S30"
+          },
+          {
+            "id": "apple:us:324684580:14746585716",
+            "app_id": "324684580",
+            "title": "Stop pushing ads. Improve offline",
+            "text": "Stop pushing promoted music I have no interest in. Stop pushing distracting videos. as a paying premium subscriber allow me to opt out of these features. \nApp playback features work poorly when there is low cell service. For instance you can’t put a song in the queue because Spotify is trying to load like 15 other options from go to concerts to explore song dna etc.",
+            "rating": 2,
+            "date": "2026-11-03T09:32:23-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S31"
+          },
+          {
+            "id": "apple:us:324684580:14746580397",
+            "app_id": "324684580",
+            "title": "My review",
+            "text": "The app is good I just don’t liek that I get adds a lot lie. To many adds without premium or something like that",
+            "rating": 3,
+            "date": "2026-11-03T09:30:46-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S32"
+          },
+          {
+            "id": "apple:us:324684580:14746569308",
+            "app_id": "324684580",
+            "title": "amazing",
+            "text": "It's really good, been using it ever since 2022, and with premium, it's the best. Do recommend for music or podcasts, etc.",
+            "rating": 5,
+            "date": "2026-11-03T09:27:23-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S33"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 2,
+      "id": "9c30b16ae71f",
+      "started_at": "2026-11-05T00:32:04.186317+00:00",
+      "duration_ms": 2
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "search_reviews",
+      "args": {
+        "app_ids": [
+          "324684580"
+        ],
+        "query": "ad"
+      },
+      "result": {
+        "matched": 4,
+        "returned": 4,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:324684580:14746901999",
+            "app_id": "324684580",
+            "title": "Music",
+            "text": "You guys give me a ad every other song or after 3 which isn’t 30mins, you said you get a ad every 30 mins not 10.",
+            "rating": 2,
+            "date": "2026-11-03T11:10:51-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S23"
+          },
+          {
+            "id": "apple:us:324684580:14746332993",
+            "app_id": "324684580",
+            "title": "Too Many Ads",
+            "text": "I love spotify lol but the amount of ads is concerning—there's an ad every 3 songs",
+            "rating": 4,
+            "date": "2026-11-03T08:17:57-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S24"
+          },
+          {
+            "id": "apple:us:324684580:14746250709",
+            "app_id": "324684580",
+            "title": "Ugh",
+            "text": "It’s good when you have premium and you’re forced to have it or you will just be listening to the same ad over and over while the shuffle feature sucks too",
+            "rating": 2,
+            "date": "2026-11-03T07:54:23-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S25"
+          },
+          {
+            "id": "apple:us:324684580:14746239444",
+            "app_id": "324684580",
+            "title": "The ads",
+            "text": "Besides having every song/podcast in the known universe, we have to talk about the ad rate. If you don’t have premium, you have a certain amount of songs you can listen to a day, plus, if you have set it for long enough, you get add after every song. Mostly ranging from 2-4 ads that span 30-60 seconds. Still better than Apple Music.",
+            "rating": 4,
+            "date": "2026-11-03T07:51:12-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S26"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 3,
+      "id": "ea9b26bdbcc9",
+      "started_at": "2026-11-05T00:32:04.755285+00:00",
+      "duration_ms": 3
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "search_reviews",
+      "args": {
+        "query": "subscription",
+        "app_ids": [
+          "324684580"
+        ]
+      },
+      "result": {
+        "matched": 1,
+        "returned": 1,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:324684580:14746362071",
+            "app_id": "324684580",
+            "title": "Very disappointed",
+            "text": "I’m very disappointed that I’m paying $15 to $20 to have add free and I can listen to any music at anytime and is says I have access to audiobooks but I have a listening limit that’s crazy and I have to paid even more to have more time I love to listen to music on here and live the benefits for that but I don’t always want to listen to music I want audiobooks to listen to and I work long hours so this helps but now I have to wait 8 days before I can listen to audiobooks again I might as well just go back to my subscription for audio books and find music on YouTube it’s easier and cheaper and for now that’s what I will do until the premium subscription on Spotify allows you to listen to audiobooks just as you can music",
+            "rating": 2,
+            "date": "2026-11-03T08:26:19-07:00",
+            "version": "9.1.94",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.691126+00:00",
+            "app_name": "Spotify: Music and Podcasts",
+            "category": "Music",
+            "citation": "S34"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 4,
+      "id": "0bb34c15c867",
+      "started_at": "2026-11-05T00:32:05.619818+00:00",
+      "duration_ms": 4
+    },
+    {
+      "agent": "Researcher 2",
+      "name": "search_reviews",
+      "args": {
+        "query": "ad",
+        "app_ids": [
+          "544007664"
+        ]
+      },
+      "result": {
+        "matched": 5,
+        "returned": 5,
+        "match_rule": "Any non-stopword query token (OR), case-insensitive FTS. Counts are keyword matches, not semantic theme prevalence.",
+        "reviews": [
+          {
+            "id": "apple:us:544007664:14746967194",
+            "app_id": "544007664",
+            "title": "Can’t skip ads",
+            "text": "Lately, beginning Oct 2026, whenever there’s an ad in the middle of a video it doesn’t show the progress bar at the bottom and the “skip” button doesn’t even appear. I get stuck watching ads for 2-3 minutes unless I completely close out the app. Then, then I go back to the video I was watching it starts it from the very beginning.",
+            "rating": 2,
+            "date": "2026-11-03T11:32:01-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S5"
+          },
+          {
+            "id": "apple:us:544007664:14746715716",
+            "app_id": "544007664",
+            "title": "Money hungry pigs",
+            "text": "Mobile version of this app is terrible now and it’s purely because of the advertising now. Over sexual ads aloud to be showed, back to back ads you can’t skip and more, and I think it’s bs that there is ads that glitch out to “accidentally” make you engage with the ad and end up opening up the link. Pitiful, i hope to  see a lawsuit coming against yall soon",
+            "rating": 1,
+            "date": "2026-11-03T10:12:08-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S13"
+          },
+          {
+            "id": "apple:us:544007664:14746638870",
+            "app_id": "544007664",
+            "title": "Adtube and ui disaster",
+            "text": "Immediately serves you an nsfw ad no matter what you do, horrible ui changes daily, subscription no longer on the bottom bar.  Reporting an ad doesnt even make it go away. This app is terrible, use a browser instead.",
+            "rating": 1,
+            "date": "2026-11-03T09:48:31-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S14"
+          },
+          {
+            "id": "apple:us:544007664:14746637377",
+            "app_id": "544007664",
+            "title": "New update is awful",
+            "text": "The new UI is terrible and unintuitive. It’s so sensitive that scrolling selects things instead of scrolling so I have to exit out of every video and ad I try to scroll past. It makes me want to spend LESS time on the app because it’s so frustrating!",
+            "rating": 1,
+            "date": "2026-11-03T09:48:03-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S15"
+          },
+          {
+            "id": "apple:us:544007664:14746533945",
+            "app_id": "544007664",
+            "title": "Greedy Company",
+            "text": "The ads have been getting outrageous. I can’t even get through a 10 minute video without 2 ad breaks of 2 unskippable 30 second ads. This isn’t cable tv this is YouTube",
+            "rating": 1,
+            "date": "2026-11-03T09:16:43-07:00",
+            "version": "21.44.4",
+            "country": "us",
+            "source": "Apple customer-review RSS",
+            "source_row": null,
+            "fetched_at": "2026-11-05T00:02:25.703945+00:00",
+            "app_name": "YouTube",
+            "category": "Photo & Video",
+            "citation": "S16"
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 5,
+      "id": "189ea5e6ead1",
+      "started_at": "2026-11-05T00:32:06.247054+00:00",
+      "duration_ms": 3
+    },
+    {
+      "agent": "Evidence checker",
+      "name": "audit_claims",
+      "args": {
+        "claim_count": 14
+      },
+      "result": {
+        "issues": [
+          {
+            "claim_index": 12,
+            "reason": "The cited review S20 is from a non-paying user who complains about having to pay for premium to skip ads, which contradicts the claim that this is a complaint from a YouTube Premium subscriber."
+          }
+        ]
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "adeecad683a2",
+      "started_at": "2026-11-05T00:32:15.543242+00:00",
+      "duration_ms": 1748
+    },
+    {
+      "agent": "Evidence checker",
+      "name": "audit_claims",
+      "args": {
+        "pass": 2
+      },
+      "result": {
+        "issues": []
+      },
+      "status": "complete",
+      "turn": 0,
+      "id": "d25e78d6e03b",
+      "started_at": "2026-11-05T00:32:22.366659+00:00",
+      "duration_ms": 1208
+    }
+  ]
+}
