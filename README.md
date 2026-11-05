@@ -276,8 +276,8 @@ The November 4, 2026 audit checked the assignment PDF and supplied Wikipedia Dee
 | Supported claims and accurate citation handling | Retrieved-only source registry, citation-ID validation, claim audit, repair/pruning, and fail-closed behavior on audit failure. All three recorded runs' cited records and numerical checks are verified; model judgments still require source review. |
 | Show work and Project 1 `/chat` contract | Exact `response`, `session_id`, `tool_calls`; traced sub-agent invocations and tool calls include `agent`. Contract test passes. |
 | Reachable Cloud Run and shipped data | Public service returns 200; 162,583 reviews loaded; compressed data is committed below GitHub's per-file limit and copied into the image. Cloud Run timeout is 300 seconds. |
-| Continuous deploy from GitHub | **Pending owner authorization.** Configuration is prepared below; current Cloud Build trigger list has no App Atlas trigger. Manual source deployment is working. |
-| Private-repo grader access | **Pending owner authorization.** GitHub currently lists only `johnsonhe`, with no pending invitations. Required accounts are listed under Submission. |
+| Continuous deploy from GitHub | **Enabled.** Developer Connect links this repository to Cloud Build trigger `app-atlas-jh5102-continuous`; pushes to `codex/app-atlas` build and deploy the service using `cloudbuild.yaml`. |
+| Private-repo grader access | **Pending owner authorization.** See `VALIDATION.md` for the remaining access requirements. |
 | Signup-sheet registration and uniqueness | **Unverified.** The linked course sheet requires authenticated access. Confirm the `jh5102` entry and that the dataset or exploration problem is unique. |
 | Courseworks submission and keeping service available | **Owner action.** Submit the repository URL and retain the deployed service until grades are released. |
 
@@ -303,7 +303,15 @@ The runtime service account needs Vertex AI access (for example `roles/aiplatfor
 
 `cloudbuild.yaml` builds the Docker image, pushes to the existing regional Artifact Registry repository, and deploys this service. `deploy/trigger.json` specifies the private `johnsonhe/app-atlas` repository, branch `codex/app-atlas`, existing course GitHub connection, and existing build service account.
 
-**Status: prepared, not activated.** Automatic approval review rejected creating a persistent Developer Connect link to the private repository because the required repository-access grant was not explicitly authorized. No alternate integration was created to bypass that restriction. After the repository owner approves that exact connection, activate with:
+**Status: enabled.** Pushes to `codex/app-atlas` automatically build the committed Dockerfile and packaged data, push the image to Artifact Registry, and deploy `app-atlas-jh5102`. The Cloud Run service receives a `commit-sha` label identifying the deployed commit. You do not need to run the manual deploy command for normal updates.
+
+- **Cloud Build trigger:** `app-atlas-jh5102-continuous` (`72293ec4-7b38-444d-ad7d-06fd3d60574f`).
+- **Region/project:** `northamerica-northeast2` / `ieor-4570`.
+- **Repository link:** `connection-bvmnqxb/gitRepositoryLinks/johnsonhe-app-atlas`.
+- **Branch filter:** `^codex/app-atlas$`.
+- [View builds in Google Cloud Console](https://console.cloud.google.com/cloud-build/builds;region=northamerica-northeast2?project=ieor-4570).
+
+The connection and trigger were created with the following commands, retained for reproducibility (they do not need to be rerun on an already configured project):
 
 ```sh
 gcloud developer-connect connections git-repository-links create johnsonhe-app-atlas \
@@ -313,6 +321,6 @@ gcloud builds triggers import --source=deploy/trigger.json \
   --region=northamerica-northeast2 --project=ieor-4570
 ```
 
-The trigger grants the existing GCP integration ongoing access to fetch the project source and deploy branch changes. It is limited to this new repository and does not modify Surfcheck. The GitHub App installation must also permit this repository.
+The trigger uses the authorized GCP integration to fetch this repository and deploy changes on the specified branch. It does not modify Surfcheck.
 
 Session histories and live-discovered records are ephemeral per Cloud Run instance. Saved reports include source snapshots in browser storage. The three committed grading examples' evidence is reloaded at startup, so their citation endpoints remain available after container restarts.

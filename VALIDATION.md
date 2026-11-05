@@ -49,11 +49,18 @@ Live app: https://app-atlas-jh5102-773581043508.northamerica-northeast2.run.app
 - A real deployed `/chat` investigation completed in **53.12 seconds**, returned exactly `response`, `session_id`, and `tool_calls`, and recorded 28 traced calls with agent names. All **15 final citation endpoints** returned HTTP 200. Complete output is in `output/production-smoke.json`.
 - Earlier browser checks covered app search/profile, vague-input clarification, streaming reports, citation drawers, saving reports, and the minimal monochrome interface. This audit changed no frontend behavior.
 
+## Continuous deployment
+
+- Owner authorized the private-repository connection and automatic deployments.
+- Developer Connect repository link: `projects/ieor-4570/locations/northamerica-northeast2/connections/connection-bvmnqxb/gitRepositoryLinks/johnsonhe-app-atlas`.
+- Enabled Cloud Build trigger: `app-atlas-jh5102-continuous`, ID `72293ec4-7b38-444d-ad7d-06fd3d60574f`.
+- Exact push branch filter: `^codex/app-atlas$`. Build configuration: `cloudbuild.yaml`; service account and substitutions: `deploy/trigger.json`.
+- Each deployment labels Cloud Run with its Git commit SHA. Triggered builds and their logs are available in the Cloud Build console linked in the README.
+
 ## Remaining submission requirements
 
-1. **Continuous deployment is not active.** Read-only inspection found no App Atlas Cloud Build trigger. `cloudbuild.yaml` and `deploy/trigger.json` are ready. Automatic approval review previously rejected the persistent private-repository Developer Connect access grant because it lacked explicit owner authorization; no workaround was used. The exact proposed activation is documented in the README.
-2. **Grader access is not granted.** GitHub lists only `johnsonhe` as a collaborator and zero pending invitations. The assignment's accounts are `codeboi07`, `bhuvighosh3`, `nniishhh`, and `x`. Inviting them grants third parties access to the private repository and awaits explicit owner authorization.
-3. **Registration/uniqueness is unverified.** The assignment's signup-sheet export returned 401 (authentication required). Confirm the `jh5102` entry and that the dataset or question domain is unique. The linked deployment guide also requires authenticated access; its contents could not be independently checked, although the PDF's explicit deployment requirements were checked.
-4. **Courseworks submission and continued availability are owner actions.** Submit the GitHub repository URL and keep Cloud Run running until grades are released.
+1. **Grader access is not granted.** GitHub lists only `johnsonhe` as a collaborator and zero pending invitations. The assignment's accounts are `codeboi07`, `bhuvighosh3`, `nniishhh`, and `x`. Inviting them grants third parties access to the private repository and awaits explicit owner authorization.
+2. **Registration/uniqueness is unverified.** The assignment's signup-sheet export returned 401 (authentication required). Confirm the `jh5102` entry and that the dataset or question domain is unique. The linked deployment guide also requires authenticated access; its contents could not be independently checked, although the PDF's explicit deployment requirements were checked.
+3. **Courseworks submission and continued availability are owner actions.** Submit the GitHub repository URL and keep Cloud Run running until grades are released.
 
 The root README's specification audit records these as pending/unverified, not passed. The qualitative non-credit peer-review scores are left for reviewers to assess.
