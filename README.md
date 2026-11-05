@@ -316,9 +316,3 @@ gcloud builds triggers import --source=deploy/trigger.json \
 The trigger grants the existing GCP integration ongoing access to fetch the project source and deploy branch changes. It is limited to this new repository and does not modify Surfcheck. The GitHub App installation must also permit this repository.
 
 Session histories and live-discovered records are ephemeral per Cloud Run instance. Saved reports include source snapshots in browser storage. The three committed grading examples' evidence is reloaded at startup, so their citation endpoints remain available after container restarts.
-
-## Submission
-
-`submission.json` contains `authors: ["jh5102"]` and `path: "research"`. Its `deploy_url` is filled only after a successful verified deployment. Submit this repository URL on Courseworks and keep the service running until grades are released. Confirm that the chosen question/domain is recorded in the course signup sheet.
-
-This repository is private. The assignment lists `codeboi07`, `bhuvighosh3`, `nniishhh`, and `x` as grader collaborator accounts; the owner should grant the required access before submission. No collaborator invitations are sent automatically.
