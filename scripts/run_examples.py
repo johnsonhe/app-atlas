@@ -44,7 +44,6 @@ async def run_one(example, base, output):
     if not done:
         raise RuntimeError("Research stream did not finish")
     (output / (example["id"] + ".json")).write_text(json.dumps(done, indent=2, ensure_ascii=False))
-    (output / (example["id"] + ".md")).write_text(done["result"]["response"] + "\n")
     if done["status"] != "complete":
         raise RuntimeError(f"Example {example['id']} failed: {done['status']}")
     # Precisely the same main model, no tools and no system instruction.

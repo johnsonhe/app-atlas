@@ -206,3 +206,39 @@ async def test_existing_identified_samples_are_not_silently_refreshed(monkeypatc
     result=await research.execute_tool(run,"fetch_reviews",{"app_id":"100"})
     assert result["fetched"]==0
     assert result["stored_reviews"]==2
+
+
+@pytest.mark.parametrize("failure_pass", [1, 2])
+async def test_audit_failure_never_publishes_an_unchecked_report(monkeypatch, failure_pass):
+    audits = 0
+    current_run = research.Run("Investigate subscriptions", "audit-failure")
+
+    async def fake_json(model, instruction, prompt, schema):
+        nonlocal audits
+        if schema is research.Plan:
+            return research.Plan(scope="Notes reviews", tasks=[
+                research.Task(topic="Pricing", question="Read complaints"),
+                research.Task(topic="Praise", question="Read counterexamples")])
+        if schema is research.GapCheck:
+            return research.GapCheck(covered=True, explanation="Covered", tasks=[])
+        if schema is research.CitationAudit:
+            audits += 1
+            if audits == failure_pass:
+                raise RuntimeError("Audit service unavailable")
+            return research.CitationAudit(issues=[research.AuditIssue(claim_index=0, reason="Overstated")])
+        sid = next(k for k, v in current_run.evidence.items.items() if v["kind"] == "review")
+        return research.Report(title="Unchecked draft", summary=[
+            research.Claim(text="Unchecked finding.", sources=[sid])], sections=[], limitations=[])
+
+    async def fake_researcher(run, task, number):
+        await research.execute_tool(run, "search_reviews", {"query": "subscription"})
+        return {"findings": "Retrieved evidence"}
+
+    monkeypatch.setattr(research, "json_model", fake_json)
+    monkeypatch.setattr(research, "researcher", fake_researcher)
+    result = await research.run_research(current_run, [])
+    assert current_run.status == "error"
+    assert current_run.report is None
+    assert "Unchecked finding" not in result["response"]
+    assert any(c["name"] == "audit_claims" and c["status"] == "error" for c in result["tool_calls"])
+    assert current_run.evidence.items

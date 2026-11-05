@@ -254,6 +254,8 @@ You are the Writer. You receive ONLY the question, researchers' findings, and re
 Every factual sentence belongs in a Claim and MUST include source IDs that directly support it. The summary also consists of cited Claims. Never cite a general coverage source for a product-specific claim. Never cite listing metadata as evidence of an actual user experience. All source IDs must be from the supplied registry. Do not put citation syntax inside claim text; the renderer adds links.
 Use 2-4 useful sections. State concrete findings and differences. Include positive/counterevidence if retrieved. State exact scope and sample limits. If you cannot answer, say what is missing without inventing a substitute metric. Treat source absence as unknown, not zero. In limitations, describe missing information or caveats, not new factual findings. Next steps are clearly proposed investigations, not established conclusions. No unverified suggestions disguised as facts.
 CRITICAL: A review containing 'subscription' may praise subscriptions. Never call a keyword-match percentage a 'complaint rate', 'complaint frequency', 'dissatisfaction rate', or 'volume of complaints'. Say exactly 'X of Y sampled reviews matched these keywords', then separately describe complaints supported by the reviewed examples. Use the SAME keyword query for any quantitative ranking; different keyword lists cannot establish comparative rates. Do not claim a capability or field was unavailable merely because a researcher failed: check the supplied evidence registry.
+Keep qualitative claims tied to the retrieved examples: say 'a sampled reviewer reports' or 'the retrieved reviews include'. A handful of retrieved reviews cannot establish that users generally, frequently, or predominantly feel something. Do not say a keyword count is driven by backlash or infer the sentiment of unmatched/unread reviews. A listing's omission cannot establish that a feature or business model does not exist. Cite substantive evidence for the opening summary, not only general dataset coverage.
+When reporting a multiword keyword query, spell out its OR-token matching (for example, 'matches any of these tokens'), so readers cannot mistake it for exact-phrase matching. Explicitly state when proposed next steps require new data. For pooled records with no app IDs/dates, do not propose app-specific or longitudinal analyses as if this corpus could support them. Ratings alone cannot establish retention.
 """
 
 
@@ -358,7 +360,7 @@ async def audit_report(report: Report, run: Run) -> CitationAudit:
     items = [{"claim_index": i, "text": c.text, "cited_evidence": [sources[s] for s in c.sources if s in sources]} for i,c in enumerate(claims)]
     payload = {"claims": items, "limitations": [{"claim_index": len(claims)+i,"text": text} for i,text in enumerate(report.limitations)],
                "available_source_titles": [{"id":sid,"kind":s["kind"],"title":s["title"]} for sid,s in sources.items()]}
-    audit = await json_model(MODEL, COMMON + "You are the Evidence Checker. Check each claim ONLY against its attached citations. Return issues for unsupported or overstated claims, numerical inaccuracies, misattribution, contradictory evidence, and keyword matches misrepresented as complaint frequency. An OR-keyword count can support keyword-match counts, not semantic complaint rates. Different queries cannot support a ranking. A claim may accurately say a reviewer reports something; it cannot treat a user report as independently verified fact. Also check the limitations: do not say metadata or statistics are unavailable when the source register or report actually contains them. Limitation indices follow the factual claims. Do not flag reasonable concise paraphrases or demand population representativeness when the claim explicitly says sampled. Do not add stylistic issues. Return the exact claim_index for each material support problem.", json.dumps(payload,ensure_ascii=False), CitationAudit)
+    audit = await json_model(MODEL, COMMON + "You are the Evidence Checker. Check each claim ONLY against its attached citations. Return issues for unsupported or overstated claims, numerical inaccuracies, misattribution, contradictory evidence, and keyword matches misrepresented as complaint frequency. An OR-keyword count can support keyword-match counts, not semantic complaint rates. Multiword query counts must explicitly say ANY-token/OR matching rather than imply an exact phrase. Different queries cannot support a ranking. A claim may accurately say a reviewer reports something; it cannot treat a user report as independently verified fact. A few selected reviews cannot support 'generally', 'frequently', 'predominantly', or similar frequency claims. Do not infer the absence of a product feature or business model from its omission in a listing. Flag qualitative summary findings citing only coverage records, and claims that keyword-match counts are caused by negative sentiment. Also check the limitations: do not say metadata or statistics are unavailable when the source register or report actually contains them. Limitation indices follow the factual claims. Do not flag reasonable concise paraphrases or demand population representativeness when the claim explicitly says sampled. Do not add stylistic issues. Return the exact claim_index for each material support problem.", json.dumps(payload,ensure_ascii=False), CitationAudit)
     # Deterministic backstop: keyword statistics alone cannot support a semantic
     # ranking of complaints, even if the model judge overlooks the distinction.
     flagged = {issue.claim_index for issue in audit.issues}
@@ -419,6 +421,8 @@ async def conduct(run: Run, history: list[dict]) -> dict:
     run.emit("agent_start", agent="Evidence checker", role="Evidence checker", topic="Check each claim against its cited records")
     audit = await run.call("Evidence checker", "audit_claims", {"claim_count": len(report.summary)+sum(len(s.claims) for s in report.sections)},
                            lambda: audit_report(report,run))
+    if not isinstance(audit, CitationAudit):
+        raise RuntimeError("The evidence audit could not complete")
     if isinstance(audit, CitationAudit) and audit.issues:
         # The trace uses ordinary JSON data, never opaque SDK objects.
         run.tool_calls[-1]["result"] = audit.model_dump()
@@ -428,6 +432,8 @@ async def conduct(run: Run, history: list[dict]) -> dict:
         for section in report.sections:
             section.claims = [c for c in section.claims if set(c.sources) <= allowed]
         second = await run.call("Evidence checker", "audit_claims", {"pass":2},lambda: audit_report(report,run))
+        if not isinstance(second, CitationAudit):
+            raise RuntimeError("The repaired report's evidence audit could not complete")
         if isinstance(second,CitationAudit):
             run.tool_calls[-1]["result"] = second.model_dump()
             bad = {issue.claim_index for issue in second.issues}
