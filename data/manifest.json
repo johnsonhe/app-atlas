@@ -1,0 +1,62 @@
+{
+  "built_at": "2026-11-05T00:23:19.079955+00:00",
+  "apps": 69,
+  "reviews": 162583,
+  "identified_reviews": 6650,
+  "pooled_reviews": 155933,
+  "mendeley_audit": {
+    "raw_columns": [
+      "Title",
+      "Review",
+      "Rating"
+    ],
+    "retained_reviews": 155933,
+    "rejected": {
+      "exact_duplicate_title_text_rating": 3877,
+      "invalid_rating": 36
+    },
+    "original_member": "A Dataset of End-User Reviews from the Apple App S/dataset.csv",
+    "archive_sha256": "446112f4eedccdb4269460d83acd93694e8ded4a0745cdec202e989ac2617be7",
+    "original_data_rows": 159846
+  },
+  "sources": [
+    {
+      "name": "Mendeley iOS reviews v2",
+      "url": "https://data.mendeley.com/datasets/75g52mjmpf/2",
+      "license": "CC BY 4.0",
+      "status": "loaded",
+      "attribution": "Mumrez Khan, 2025, DOI 10.17632/75g52mjmpf.2",
+      "limitations": "Only title, text and rating are present. No app IDs, dates or categories."
+    },
+    {
+      "name": "Apple Search / Lookup API",
+      "url": "https://performance-partners.apple.com/search-api",
+      "status": "loaded",
+      "selection": "Explicit curated seed across categories; live keyword discovery can add apps. Not an exhaustive census."
+    },
+    {
+      "name": "Apple customer-review RSS",
+      "url": "https://itunes.apple.com/us/rss/customerreviews/id=324684580/sortby=mostrecent/json",
+      "status": "loaded",
+      "selection": "Up to two most-recent pages per curated seed app, US storefront; deduplicated."
+    },
+    {
+      "name": "AppGoblin",
+      "url": "https://appgoblin.info/free-app-datasets",
+      "license": "CC BY 4.0",
+      "status": "available to import; not loaded",
+      "limitations": "Free account required for exports. No AppGoblin data is claimed unless imported."
+    }
+  ],
+  "collection_errors": [],
+  "files": {
+    "apps.jsonl.gz": {
+      "bytes": 87743,
+      "sha256": "6edd67fc84c6e68c11998fb113b6b42b327e061614d7b856e83513b7372f8356"
+    },
+    "reviews.jsonl.gz": {
+      "bytes": 20562584,
+      "sha256": "f3979a5537d6c28f5e3ca39ee5f0357891e831dec0d2febee23d36d9f5689698"
+    }
+  }
+}

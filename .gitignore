@@ -1,0 +1,12 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+data/raw/
+data/*.db-shm
+data/*.db-wal
+data/*.db
+.DS_Store
+.openai/
+output/screenshots/

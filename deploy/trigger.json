@@ -1,0 +1,16 @@
+{
+  "name": "app-atlas-jh5102-continuous",
+  "description": "Build and deploy App Atlas when its dedicated development branch changes.",
+  "filename": "cloudbuild.yaml",
+  "serviceAccount": "projects/ieor-4570/serviceAccounts/773581043508-compute@developer.gserviceaccount.com",
+  "developerConnectEventConfig": {
+    "gitRepositoryLink": "projects/ieor-4570/locations/northamerica-northeast2/connections/connection-bvmnqxb/gitRepositoryLinks/johnsonhe-app-atlas",
+    "gitRepositoryLinkType": "GITHUB",
+    "push": {"branch": "^codex/app-atlas$"}
+  },
+  "substitutions": {
+    "_REGION": "northamerica-northeast2",
+    "_REPOSITORY": "cloud-run-source-deploy",
+    "_SERVICE": "app-atlas-jh5102"
+  }
+}
